@@ -74,36 +74,39 @@ A CTO with literature major ought to earn differently from a CTO with computer s
 # Create and evaluate models
 All models were evaluated with 5-fold cross-validation with their mean scores and standard deviations reported.
 ### Model 1: Linear Regression
-Avg_score: 384.73, Std.dev: 1.064
+Avg_score: 384.73  
+Std.dev: 1.064
 ### Model 2: Linear Regression with interactions
-Avg_score: 354.17, Std.dev: 0.767
+Avg_score: 354.17  
+Std.dev: 0.767
 ### Models 3, 4, and 5: [ Random Forest, LightGBM, Gradient Boosting ]
 We will do randomized grid search to get quasi-optimal hyperparameters on the dummy_train data set. Since this is computationally very intensive, I used Google Colaboratory's fastest processors, Tensor Processing Units (TPUs), to get the tuned hyperparameters for evaluating performance on the testing set. The final results from Google Colab are printed below.
 
-- model: lgbm
-score with best parameters: 357.68
-average score: 400.76
-standard deviation: 112.0
-best parameters: {'num_leaves': 63, 'max_depth': 12}
-Executed in 7.24 minutes
+- model: lgbm (LightGBM)  
+score with best parameters: 357.68  
+average score: 400.76  
+standard deviation: 112.0  
+best parameters: {'num_leaves': 63, 'max_depth': 12}  
+Executed in 7.24 minutes  
 
-- model: rfr
-score with best parameters: 444.17
-average score: 447.19
-std dev: 2.0
-best parameters: {'n_estimators': 150, 'max_features': 'sqrt'}
-Executed in 100.55 minutes
+- model: rfr (Random Forest Regressor)  
+score with best parameters: 444.17  
+average score: 447.19  
+std dev: 2.0  
+best parameters: {'n_estimators': 150, 'max_features': 'sqrt'}  
+Executed in 100.55 minutes  
 
-- model: gbr
-score with best parameters: 397.17
-average score: 540.69
-standard deviation: 148.0
-best parameters: {'subsample': 0.1, 'n_estimators': 130, 'max_features': 'auto', 'max_depth': 16, 'learning_rate': 0.05}
-Executed in 101.29 minutes
+- model: gbr (Gradient Boosting Regressor)  
+score with best parameters: 397.17  
+average score: 540.69  
+standard deviation: 148.0  
+best parameters: {'subsample': 0.1, 'n_estimators': 130, 'max_features': 'auto', 'max_depth': 16, 'learning_rate': 0.05}  
+Executed in 101.29 minutes  
 
 ### Model 6: Stacking
 I used the StackingRegressor using a combination of our best performing and fastest linear and tree-based methods - linear regression with interactions and LightGBM, respectively. The interactions data was passed through to the StackingRegressor along with the combined predictions of these two models to make final predictions. The results on 3-fold cross-validation:
-Avg_score: 354.2, Std.dev: 0.476
+Avg_score: 354.2  
+Std.dev: 0.476
 
 ### Testing models on unseen data
 I select the stacked model based on its performance on cross-validated data where the test set should only be used for gauging model performance as opposed to model selection. However, I still want to see how each model performs on the test set out curiosity - not for final selection which we have already made. Here's how they performed:
