@@ -15,9 +15,29 @@ For data cleaning:
 Finally, I split the data into 75% training and 25% testing sets.
 
 # Exploratory Data Analysis
-This is the distribution of salary data
+
+### Distribution of salary data
+
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/1.png)
 
 It's a typical salary distribution with right-skew representing very high earners. I could log-transform it for better symmetry but did not for two reasons:
 1. The distribution is generally symmetric so it's not a big risk.
 2. Saying our model is generally off by X thousand dollars is far easier to interpret for stakeholders than saying it is off by X log dollars.
+
+Now we evaluate each categorical feature against salary and see if the categories differ. Here are two examples of job type and degree by salary.
+
+### Job type by salary
+
+![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/2.png)
+
+### Degree by salary
+
+![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/3.png)
+
+After categorical features, now we compare numeric features against salary.
+#### Correlation plot
+![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/4.png)
+#### Correlation Heatmap
+![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/5.png)
+
+Salary is higher with more experience. Salary is lower as distance from metropolis increases. Experience and distance have almost no correlation.
