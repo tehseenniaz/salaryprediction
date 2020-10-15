@@ -104,12 +104,14 @@ best parameters: {'subsample': 0.1, 'n_estimators': 130, 'max_features': 'auto',
 Executed in 101.29 minutes  
 
 ### Model 6: Stacking
-I used the StackingRegressor using a combination of our best performing and fastest linear and tree-based methods - linear regression with interactions and LightGBM, respectively. The interactions data was passed through to the StackingRegressor along with the combined predictions of these two models to make final predictions. The results on 3-fold cross-validation:
+I used the StackingRegressor using a combination of our best performing and fastest linear and tree-based methods - linear regression with interactions and LightGBM, respectively. The interactions data was passed through to the StackingRegressor along with the combined predictions of these two models to make final predictions.  
+The results on 3-fold cross-validation:  
 Avg_score: 354.2  
 Std.dev: 0.476
 
 ### Testing models on unseen data
 I select the stacked model based on its performance on cross-validated data where the test set should only be used for gauging model performance as opposed to model selection. However, I still want to see how each model performs on the test set out curiosity - not for final selection which we have already made. Here's how they performed:
+
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/6.png)
 
 
