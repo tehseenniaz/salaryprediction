@@ -39,7 +39,7 @@ After categorical features, now we compare numeric features against salary.
 #### Correlation plot
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/4.png)
 #### Correlation Heatmap
-![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/5.png)
+![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/hm.png)
 
 Salary is higher with more experience.  
 Salary is lower as distance from metropolis increases.  
