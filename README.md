@@ -73,7 +73,11 @@ CFO in finance industry would earn more than a CFO in education, which means tha
 A CTO with literature major ought to earn differently from a CTO with computer science major.
 
 - JobType * yearsExperience  
-25 years of experience as a janitor ought to be different from same experience as a senior, so salary changes due to experience differs by job type.
+25 years of experience as a janitor ought to be different from same experience as a senior, so salary changes due to experience differs by job type.  
+
+This results in 378 features if we include all interactions terms, which is a lot. We could do principal component analysis for reducing this deminsionality but I didn't because:
+1. PCA doesn't work well with highly sparse data
+2. We have about 2000 observations per feature as it is
 
 # Create and evaluate models
 All models were evaluated with at least 3-fold cross-validation with their average MSE and standard deviations reported.
