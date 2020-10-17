@@ -24,13 +24,13 @@ It's a typical salary distribution with right-skew representing very high earner
 1. The distribution is generally symmetric so it's not a big risk.
 2. Saying our model is generally off by X thousand dollars is far easier to interpret for stakeholders than saying it is off by X log dollars.
 
-Now, we evaluate each categorical feature against salary and see if the categories differ. Here are two examples of job type and degree by salary.
+Now, we evaluate each categorical feature against salary and see if the categories differ. Here are two examples of Salary by job type and degree.
 
-### Job type by salary
+### Salary by Job type
 
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/2.png)
 
-### Degree by salary
+### Salary by degree
 
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/3.png)
 
