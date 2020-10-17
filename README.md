@@ -108,6 +108,7 @@ I used the StackingRegressor using a combination of our best performing and fast
 The results on 3-fold cross-validation:  
 Avg_score: 354.2  
 
+Stacking is the best performer of all.  
 ### Testing models on unseen data
 I select the stacked model based on its performance on cross-validated data where the test set should only be used for gauging model performance as opposed to model selection. However, I still want to see how each model performs on the test set out curiosity - not for final selection which we have already made. Here's how they performed:
 
