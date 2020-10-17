@@ -126,4 +126,4 @@ It appears that where a person lives is the most important predictor after contr
 
 This is a somewhat surprising revelation, but it could speak to the effect of non-professional socio-economic factors in determining financial success and everything that leads up to it.  
 
-Experience, whether they are in the finance or oil industry, with or without an engineering background, etc. are also some of the most potent predictors of salary.
+Experience, regardless of industry, background, etc., is also one of the most potent predictors of salary, which is not at all surprising.
