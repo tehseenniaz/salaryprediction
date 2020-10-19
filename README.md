@@ -116,8 +116,8 @@ I select the stacked model based on its performance on cross-validated data wher
 
 The linear model with and without interactions and the stacked model differ by mere decimal points around 353 on the testing set. We have already decided on the stacked model so this just confirms its stable performance since its almost identical with the cross-validated score.  
 
-Stacked model's performance on test set is **MSE of 353.53**, so we are making an error of about **USD 18,800** on average per prediction.  
-This is a significant improvement over using industry average with **MSE of 1624** or an error of about **USD 40,200** on average per prediction.  
+Stacked model's performance on test set is **MSE of 353.53**, so we are making an error of about **USD 595** on average per prediction.  
+This is a **53%** improvement over using industry average with **MSE of 1624** or an error of about **USD 1274** on average per prediction.  
 
 Since there's no way to plot feature importances from a stacking regressor, we will see feature importance from LightGBM which was in the stacked model.  
 ![](https://github.com/tehseenniaz/salarypredictionportfolio/blob/master/7.PNG)
